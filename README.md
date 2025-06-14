@@ -113,3 +113,33 @@ You can choose from various YOLOv8 model sizes:
 - yolov8m.pt (medium)
 - yolov8l.pt (large)
 - yolov8x.pt (xlarge) - slowest but most accurate
+
+
+# K-Fold Data Filtering for Robust Model Training
+
+To enhance the robustness and accuracy of our action classification model, we employ a K-Fold Data Filtering strategy inspired by K-Fold cross-validation. This method helps us identify and exclude noisy or unrepresentative data, leading to improved model optimization.
+
+## Motivation
+
+* **Inspired by K-Fold cross-validation:** We assess the classification accuracy of each image to understand its contribution to the overall model performance.
+* **Addressing data outliers:** We assume that images with low classification accuracy are likely outliers or apart from the true data distribution. By removing these, we prevent them from negatively impacting model optimization.
+
+## Method
+
+The K-Fold Data Filtering process involves the following steps:
+
+1.  **Divide the data into K subsets:** The entire dataset is partitioned into K equally sized folds.
+2.  **Train the model K times:** The model is trained K separate times. In each iteration, K-1 folds are used for training, and the remaining 1 fold is reserved for testing. This allows us to evaluate the model's performance on different subsets of the data.
+3.  **Discard images with lower accuracy:** Based on the evaluations from the K training runs, images that consistently yield lower classification accuracy than a pre-defined threshold are identified and discarded. This ensures that only high-quality data contributes to the final model.
+4.  **Train the final action classification model (MobileNet) with filtered dataset:** After the filtering process, the MobileNet model is trained one last time using the refined, higher-quality dataset. This final training benefits from the removal of potentially misleading or noisy samples.
+
+## Related Files
+
+The following files are integral to the implementation of the K-Fold Data Filtering process:
+
+* `train_mobilenetv3_kfold.py`: Script responsible for training the MobileNetV3 model using the K-Fold cross-validation strategy, including the accuracy assessment for each image.
+* `gen_action_crops_kfold.py`: Generates image crops relevant to actions, likely preparing them for K-Fold processing and further analysis.
+* `convert_label_to_yolo_kfold.py`: Converts annotation labels (possibly from LabelMe or similar) into YOLO format, tailored for the K-Fold pipeline.
+* `mobilenet_kfold_image_scores.csv`: Stores the classification scores or accuracies for each image across the K-Fold runs, used for identifying low-accuracy images.
+* `per_class_accuracy.csv`: Provides a breakdown of accuracy per class, useful for understanding classification performance at a granular level.
+* `per_image_accuracy.csv`: Contains the individual classification accuracy for each image, which is crucial for the filtering step.
