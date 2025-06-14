@@ -9,9 +9,9 @@ This project focuses on object detection using YOLOv5.
 
 ## Setup
 1. Install the required packages:
-   ```
-   pip install torch tqdm pyyaml
-   ```
+```
+pip install torch tqdm pyyaml
+```
 
 2. Train YOLOv8 Detection Model:
 ```bash
