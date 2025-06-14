@@ -1,4 +1,30 @@
-# 2-Stage. YOLO for object detection and  MobileNet for action classification
+# 1-Stage. YOLOv5 Object Detection Project
+
+이 프로젝트는 YOLOv5를 사용한 객체 감지 프로젝트입니다.
+
+## 파일 구조
+- `train_yolov5.py`: YOLOv5 모델 학습 스크립트
+- `test_yolov5.py`: 학습된 모델 테스트 스크립트
+- `yolo.yaml`: YOLOv5 설정 파일
+
+## 사용 방법
+1. 모델 학습:
+```bash
+python train_yolov5.py
+```
+
+2. 모델 테스트:
+```bash
+python test_yolov5.py
+```
+
+## 주의사항
+- 모델 파일(`yolov5s.pt`)은 별도로 다운로드해야 합니다.
+- 학습에 필요한 데이터셋은 별도로 준비해야 합니다. 
+
+
+
+# 2-Stage model. YOLO for object detection and  MobileNet for action classification
 
 # YOLO Action Detection
 
@@ -87,29 +113,3 @@ You can choose from various YOLOv8 model sizes:
 - yolov8m.pt (medium)
 - yolov8l.pt (large)
 - yolov8x.pt (xlarge) - slowest but most accurate
-
-1-Stage YOLOv5 Object Detection Project
-This repository contains a simple object detection pipeline using YOLOv5.
-
-📁 File Structure
-train_yolov5.py – Script to train the YOLOv5 model
-
-test_yolov5.py – Script to test the trained model
-
-yolo.yaml – YOLOv5 configuration file (e.g., dataset and class info)
-
-🛠️ Usage
-1. Train the model
-bash
-복사
-편집
-python train_yolov5.py
-2. Test the model
-bash
-복사
-편집
-python test_yolov5.py
-⚠️ Notes
-The YOLOv5 weights file (e.g., yolov5s.pt) must be downloaded separately from the Ultralytics YOLOv5 repository.
-
-A properly formatted dataset (images and labels) must be prepared in advance. You can follow the YOLOv5 data format guide for more information.
