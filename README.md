@@ -9,7 +9,7 @@ This project focuses on object detection using YOLOv5.
 * interpolated dataset can be used
 * **Interpolated Data:** Additional interpolated data used in this project can be accessed via the following Google Drive link: [https://drive.google.com/drive/folders/1xeGnJD2NTYmHJptfjv-ICHu57Ty_WdBA?usp=sharing]
 
-While the original dataset comprised 840 samples, it was downsized to 500 for the purpose of submission.
+   While the original dataset comprised 840 samples, it was downsized to 500 for the purpose of submission.
 
 ## Setup
 1. Install the required packages:
