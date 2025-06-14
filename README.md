@@ -20,8 +20,8 @@ python test_yolov5.py
 
 ## 주의사항
 - 모델 파일(`yolov5s.pt`)은 별도로 다운로드해야 합니다.
-- 학습에 필요한 데이터셋은 별도로 준비해야 합니다. 
-
+- 학습에 필요한 데이터셋은 별도로 준비해야 합니다. <br>
+<br>
 
 
 # 2-Stage model. YOLO for object detection and  MobileNet for action classification
