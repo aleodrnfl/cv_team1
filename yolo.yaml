@@ -1,0 +1,9 @@
+train: dataset_yolo/CV_Train/images/train # train images (relative to 'path') 39384 images
+val: /dataset_yolo/CV_Train/images/train
+
+# Classes
+names:
+  0: standing
+  1: lying
+  2: throwing
+  3: sitting
