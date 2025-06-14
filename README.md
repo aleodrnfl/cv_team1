@@ -1,26 +1,32 @@
 # 1-Stage. YOLOv5 Object Detection Project
 
-이 프로젝트는 YOLOv5를 사용한 객체 감지 프로젝트입니다.
+This project focuses on object detection using YOLOv5.
 
-## 파일 구조
-- `train_yolov5.py`: YOLOv5 모델 학습 스크립트
-- `test_yolov5.py`: 학습된 모델 테스트 스크립트
-- `yolo.yaml`: YOLOv5 설정 파일
+## File Structure
+* `train_yolov5.py`: Script for training the YOLOv5 model.
+* `test_yolov5.py`: Script for testing the trained model.
+* `yolo.yaml`: Configuration file for YOLOv5.
 
-## 사용 방법
-1. 모델 학습:
+## Setup
+1. Install the required packages:
+   ```
+   pip install torch tqdm pyyaml
+   ```
+
+2. Train YOLOv8 Detection Model:
 ```bash
 python train_yolov5.py
 ```
 
-2. 모델 테스트:
+3. Test YOLOv8 and change format to json:
 ```bash
 python test_yolov5.py
 ```
 
-## 주의사항
-- 모델 파일(`yolov5s.pt`)은 별도로 다운로드해야 합니다.
-- 학습에 필요한 데이터셋은 별도로 준비해야 합니다. <br>
+## Important Notes
+
+* The pre-trained model file (`yolov5s.pt`) must be downloaded separately.
+* The dataset required for training must be prepared separately. <br>
 <br>
 
 
