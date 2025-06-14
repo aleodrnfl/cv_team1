@@ -6,6 +6,9 @@ This project focuses on object detection using YOLOv5.
 * `train_yolov5.py`: Script for training the YOLOv5 model.
 * `test_yolov5.py`: Script for testing the trained model.
 * `yolo.yaml`: Configuration file for YOLOv5.
+* interpolated dataset can be used
+* **Interpolated Data:** Additional interpolated data used in this project can be accessed via the following Google Drive link: [https://drive.google.com/drive/folders/1xeGnJD2NTYmHJptfjv-ICHu57Ty_WdBA?usp=sharing]
+
 
 ## Setup
 1. Install the required packages:
