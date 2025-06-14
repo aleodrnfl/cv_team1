@@ -112,8 +112,8 @@ You can choose from various YOLOv8 model sizes:
 - yolov8s.pt (small)
 - yolov8m.pt (medium)
 - yolov8l.pt (large)
-- yolov8x.pt (xlarge) - slowest but most accurate
-
+- yolov8x.pt (xlarge) - slowest but most accurate<br>
+<br>
 
 # K-Fold Data Filtering for Robust Model Training
 
