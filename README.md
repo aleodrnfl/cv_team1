@@ -1,4 +1,4 @@
-# 1-Stage. YOLOv5 Object Detection Project
+# 1️⃣ 1-Stage. YOLOv5 Object Detection Project
 
 This project focuses on object detection using YOLOv5.
 
@@ -30,7 +30,7 @@ python test_yolov5.py
 <br>
 
 
-# 2-Stage model. YOLO for object detection and  MobileNet for action classification
+# 2️⃣ 2-Stage model. YOLO for object detection and  MobileNet for action classification
 
 # YOLO Action Detection
 
@@ -121,7 +121,7 @@ You can choose from various YOLOv8 model sizes:
 - yolov8x.pt (xlarge) - slowest but most accurate<br>
 <br>
 
-# K-Fold Data Filtering for Robust Model Training
+# 3️⃣ K-Fold Data Filtering for Robust Model Training
 
 To enhance the robustness and accuracy of our action classification model, we employ a K-Fold Data Filtering strategy inspired by K-Fold cross-validation. This method helps us identify and exclude noisy or unrepresentative data, leading to improved model optimization.
 
